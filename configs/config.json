@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "raw_csv": "f1_results.csv",
+  "date_format": "%Y-%m-%d",
+  "raw": "data/raw",
+  "interim": "data/interim",
+  "processed": "data/processed",
+  "reports": "reports"
+}
