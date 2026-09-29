@@ -30,8 +30,7 @@ def CleanF1Results(df_in: pd.DataFrame) -> pd.DataFrame:
 
     df["finished"] = df["status"].str.strip().str.lower() == "finished"
 
-    df = df.drop_duplicates()
-
-    df = df.sort_values(["season", "round", "position"], na_position="last").reset_index(drop=True)
+    df = df.sort_values(["season", "round", "position"], na_position="last")
+    df = df.drop_duplicates(subset=["season", "round", "driver_id"], keep="first").reset_index(drop=True)
 
     return df
